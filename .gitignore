@@ -10,9 +10,12 @@
 # dependencies
 /node_modules
 
+<<<<<<< HEAD
 # images
 # /src/assets/images/sesiones
 
+=======
+>>>>>>> parent of 6124ddd1 (ADDED: HEADER, FOOTER y HOME con estilos.)
 # profiling files
 chrome-profiler-events*.json
 
