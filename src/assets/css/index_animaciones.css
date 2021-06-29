@@ -1,0 +1,46 @@
+/*=========================
+  Animaciones imagen principal, título y subtítulo
+ ================= */
+
+.view {
+  height: 80%;
+}
+
+@media (max-width: 768px) {
+  .view {
+    height: 80vh;
+  }
+}
+
+.navbar {
+  background-color: #ece2d777 !important;
+  transition: all 0.5s;
+}
+
+.navbar_opacity50 {
+  opacity: 50%;
+  transition: all 0.5s;
+}
+
+.navbar_fullopacity {
+  opacity: 100%;
+  transition: all 0.5s;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f1ec77;
+  transition: all 0.25s;
+}
+
+h1 {
+  letter-spacing: 8px;
+}
+
+h5 {
+  letter-spacing: 3px;
+}
+
+.hr-light {
+  border-top: 3px solid #fff;
+  width: 300px;
+}

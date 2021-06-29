@@ -1,0 +1,63 @@
+/*===================
+  Animaciones imagen principal, título y subtítulo
+===================*/
+
+.view {
+  height: 80%;
+  background-image: url("src/assets/images/sesiones/sesion_estefania/IMG_0224-home.jpg") !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  height: 100vh !important;
+  display: flex !important;
+}
+
+@media (max-width: 768px) {
+  .view {
+    height: 80vh;
+  }
+}
+
+h1 {
+  letter-spacing: 8px;
+}
+
+h5 {
+  letter-spacing: 3px;
+}
+
+.hr-light {
+  border-top: 3px solid #fff;
+  width: 300px;
+}
+
+@media (min-width: 768px) {
+  #maincard2 {
+    margin-top: 300px;
+  }
+  #maincard3 {
+    margin-top: -200px;
+  }
+  #maincard4 {
+    margin-top: 150px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #maincard2 {
+    margin-top: 400px;
+  }
+  #maincard3 {
+    margin-top: -250px;
+  }
+  #maincard4 {
+    margin-top: 150px;
+  }
+  #maincard1 * img,
+  #maincard2 * img,
+  #maincard3 * img,
+  #maincard4 * img {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
