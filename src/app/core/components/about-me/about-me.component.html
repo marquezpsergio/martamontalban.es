@@ -1,0 +1,172 @@
+<main id="about-me">
+  <div class="container my-2 p-3 text-center">
+    <!-- CARD INFO -->
+    <div class="row mt-4 mb-5">
+      <div class="col-lg-7 order-last order-lg-first p-4" id="card-info-left">
+        <div class="bio-content">
+          <h4 class="text-uppercase left" id="nombre">{{nombre}}</h4>
+          <h6 class="text-capitalize left" id="cargo">{{cargo}}</h6>
+          <p>Mi trayectoria académica transita desde la Universidad de Extremadura -desde la cual estoy realizando un
+            Sistema de Intercambio entre Centros Universitarios de España (SICUE)-, hasta mi último curso de carrera en
+            la Universidad Carlos III de Madrid, pasando por la USAL de Salamanca. <br />
+            A la formación intrínseca de mi carrera, me siento especialmente capacitada, entre otros, en edición y
+            fotografía, así como la elaboración y propuestas de guiones -para lo que he recibido diversos
+            reconocimientos</p>
+        </div>
+        <div class="container pt-2">
+          <div class="row justify-content-center text-center">
+            <!-- Icono Twitter -->
+            <div class="col-2 social-network social-circle"><a href="{{urlTwitter}}" target="_blank" class="icoTwitter"
+                title="Twitter"><i class="fab fa-twitter"></i></a></div>
+            <!-- Icono Instagram -->
+            <div class="col-2 social-network social-circle"><a href="{{urlInsta}}" target="_blank" class="icoInstagram"
+                title="Instagram"><i class="fab fa-instagram"></i></a></div>
+            <!-- Icono Facebook -->
+            <div class="col-2 social-network social-circle"><a href="{{urlFb}}" target="_blank" class="icoFacebook"
+                title="Facebook"><i class="fab fa-facebook"></i></a></div>
+            <!-- Icono LinkedIn -->
+            <div class="col-2 social-network social-circle"><a href="{{urlLinked}}" target="_blank" class="icoLinkedin"
+                title="Linkedin"><i class="fab fa-linkedin"></i></a></div>
+            <!-- Icono Email -->
+            <div class="col-2 social-network social-circle"><a href="mailto:{{email}}" class="icoEmail" title="Email"><i
+                  class="fas fa-envelope"></i></a></div>
+          </div>
+          <div class="row justify-content-center text-center">
+            <div class="col-6">
+              <a href="{{rutaCV}}" class="btn mt-3" id="btn-cv"><i class="far fa-file-alt"></i> Mira mi CV</a>
+            </div>
+            <div class="col-6">
+              <a [routerLink]="['/about-me']" fragment="contacto" class="btn mt-3" id="btn-cv"><i
+                  class="far fa-paper-plane "></i> Contacta conmigo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 order-first order-lg-last p-4" id="card-info-right">
+        <img src="{{source}}/about-me-marta.jpeg" class="bio-image" alt="image" />
+      </div>
+    </div>
+    <!-- // CARD INFO -->
+
+    <!-- FORMACIÓN ACADÉMICA -->
+    <div class="row my-5">
+      <div class="col-12">
+        <h4 class="mb-4"><i class="fas fa-graduation-cap icono-secciones" id="icono-formacion"></i> Formación Académica
+        </h4>
+        <div class="container-fluid text-start">
+          <div class="row mb-4">
+            <div class="col-9 col-md-7 offset-md-1">
+              <div class="card-body cardFormacion">
+                <h5 class="card-title">Universidad Carlos III de Madrid</h5>
+                <p class="card-subtitle mb-2 text-muted">Sept. 2020 - Junio 2021</p>
+                <p class="card-text">Comunicación Audiovisual, realizando un último año mediante
+                  un Sistema de Intercambio entre Centros Universitarios de España (SICUE) desde la
+                  Universidad de Extremadura.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-end mb-4">
+            <div class="col-9 col-md-7">
+              <div class="card-body cardFormacion">
+                <h5 class="card-title">Universidad de Salamanca</h5>
+                <p class="card-subtitle mb-2 text-muted">Sept. 2019 - Junio 2020</p>
+                <p class="card-text">Comunicación Audiovisual, realizando un Sistema de Intercambio entre Centros
+                  Universitarios de España (SICUE) desde la Universidad de Extremadura.</p>
+              </div>
+            </div>
+            <div class="d-none d-md-block col-1"></div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-9 col-md-7 offset-md-1">
+              <div class="card-body cardFormacion">
+                <h5 class="card-title">Universidad de Extremadura</h5>
+                <p class="card-subtitle mb-2 text-muted">Sept. 2016 - Junio 2021</p>
+                <p class="card-text">Comunicación Audiovisual desde el año 2017. En 2016 realicé el primer año de
+                  Educación Primaria y, a pesar de sacar el curso adelante sin problemas, vi que no era mi
+                  vocación y esto me sirvió para darme cuenta que mi lugar estaba en otro lado, en el grado de
+                  Comunicación Audiovisual, del cual estoy orgullosa de haber finalizado de manera satisfactoria y haber
+                  aprovechado las distintas oportunidades que se me han abierto en universidades de diferentes ciudades.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-end mb-4">
+            <div class="col-9 col-md-7">
+              <div class="card-body cardFormacion">
+                <h5 class="card-title">I.E.S. El Pomar</h5>
+                <p class="card-subtitle mb-2 text-muted">Sept. 2014 - Junio 2016</p>
+                <p class="card-text">Bachillerato de Ciencias Sociales.</p>
+              </div>
+            </div>
+            <div class="d-none d-md-block col-1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // FORMACIÓN ACADÉMICA -->
+
+    <!-- HABILIDADES / CUALIFICACIONES -->
+    <div class="row my-5">
+      <div class="col-12">
+        <h4><i class="fas fa-sliders-h icono-secciones" id="icono-hab_cualif"></i> Habilidades Y Cualificaciones</h4>
+      </div>
+    </div>
+    <!-- // HABILIDADES / CUALIFICACIONES -->
+
+    <!-- EXPERIENCIA LABORAL -->
+    <div class="row my-5">
+      <div class="col-12">
+        <h4><i class="fas fa-briefcase icono-secciones" id="icono-exp_lab"></i> Experiencia Laboral</h4>
+      </div>
+    </div>
+    <!-- // EXPERIENCIA LABORAL -->
+
+    <!-- INFO ADICIONAL -->
+    <div class="row my-5">
+      <div class="col-12">
+        <h4><i class="fas fa-info-circle icono-secciones" id="icono-info_add"></i> Información Adicional</h4>
+      </div>
+    </div>
+    <!-- // INFO ADICIONAL -->
+
+    <!-- CONTACTO FORM -->
+    <div class="row my-4" id="contacto">
+      <div class="col-lg-5 p-4 py-3" id="contact-form-left">
+        <i class="far fa-paper-plane pb-2" id="contact-form-icon"></i>
+        <h4>Contáctame</h4>
+        <p>Estaré encantada de escucharte!</p>
+        <div class="contact-form-info pb-1">
+          <a href="mailto:{{email}}" title="Email">
+            <span class="info-email-icon-circle">
+              <i class="fas fa-envelope"></i>
+            </span>{{email}}</a>
+        </div>
+        <div class="contact-form-info">
+          <a href="tel:+34{{telefono}}" title="Teléfono">
+            <span class="info-tel-icon-circle">
+              <i class="fas fa-phone-alt"></i>
+            </span>+34 {{telefonoStr}}
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-7 px-4 py-3" id="contact-form-right">
+        <form>
+          <div class="mt-2 mb-3">
+            <input type="email" class="form-control" name="nombre" placeholder="Nombre">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" name="email" placeholder="Email">
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" name="mensaje" rows="7" placeholder="Escriba su mensaje"></textarea>
+          </div>
+          <div class="mb-2">
+            <input type="submit" value="Enviar" class="btn" id="btn-form" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- // CONTACTO FORM -->
+  </div>
+</main>

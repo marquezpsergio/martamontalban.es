@@ -1,0 +1,20 @@
+/*=========================
+  Animaciones navbar menú
+ ================= */
+
+.navbar .nav-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.dropdown-toggle::after {
+  -webkit-transition: -webkit-transform 0.15s linear;
+  transition: -webkit-transform 0.15s linear;
+  transition: transform 0.15s linear;
+  transition: transform 0.15s linear, -webkit-transform 0.15s linear;
+}
+
+.show.dropdown .dropdown-toggle::after {
+  -webkit-transform: translateY(3px);
+  transform: translateY(3px);
+}
+
