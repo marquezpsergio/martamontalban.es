@@ -7,11 +7,12 @@ import { HomeComponent } from './core/components/home/home.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { AboutMeComponent } from './core/components/about-me/about-me.component';
+import { LoadingComponent } from './core/components/loading/loading.component';
 
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: LoadingComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about-me', component: AboutMeComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
@@ -22,7 +23,8 @@ const routes: Routes = [
     FooterComponent,
     HeaderComponent,
     HomeComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
