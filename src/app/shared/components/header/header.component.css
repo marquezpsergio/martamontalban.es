@@ -33,14 +33,6 @@
   background-color: #ece2d777 !important;
 }
 
-.navbar_opacity50 {
-  opacity: 50%;
-}
-
-.navbar_fullopacity {
-  opacity: 100%;
-}
-
 .navbar .nav-item:not(:last-child) {
   margin-right: 10px;
 }

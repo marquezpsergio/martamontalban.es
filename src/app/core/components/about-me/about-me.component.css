@@ -16,6 +16,7 @@
 .bio-image {
   border-radius: 50%;
 }
+
 .bio-content {
   text-align: left;
 }
@@ -28,6 +29,7 @@
 #cargo {
   margin-top: -8px;
 }
+
 /* Iconos Redes Sociales */
 
 .social-network a.icoFacebook {
@@ -40,7 +42,7 @@
 
 .social-network a.icoInstagram {
   background: linear-gradient(#400080, transparent),
-    linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
+  linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
 }
 
 .social-network a.icoLinkedin {
@@ -49,7 +51,7 @@
 
 .social-network a.icoEmail {
   background: linear-gradient(#d44638, transparent),
-    linear-gradient(180deg, #eeeeee, #d44638, #b23121);
+  linear-gradient(180deg, #eeeeee, #d44638, #b23121);
 }
 
 .social-network a i {
@@ -74,20 +76,18 @@
   -webkit-transition: all 0.25s;
   -moz-transition: all 0.25s;
   -o-transition: all 0.25s;
-  -ms-transition: all 0.25s;
   transition: all 0.25s;
 }
 
-#btn-cv {
+#btn-cv, #btn-contacta {
   width: 180px !important;
   -webkit-transition: all 0.25s;
   -moz-transition: all 0.25s;
   -o-transition: all 0.25s;
-  -ms-transition: all 0.25s;
   transition: all 0.25s;
 }
 
-#btn-cv:hover {
+#btn-cv:hover, #btn-contacta:hover {
   width: 200px !important;
   font-size: 18px;
 }
@@ -160,7 +160,7 @@
 
 .info-email-icon-circle {
   background: linear-gradient(#d44638, transparent),
-    linear-gradient(180deg, #eeeeee, #d44638, #b23121);
+  linear-gradient(180deg, #eeeeee, #d44638, #b23121);
 }
 
 .info-tel-icon-circle {
@@ -173,7 +173,6 @@
   -webkit-transition: all 0.25s;
   -moz-transition: all 0.25s;
   -o-transition: all 0.25s;
-  -ms-transition: all 0.25s;
   transition: all 0.25s;
 }
 
@@ -183,7 +182,7 @@
 }
 
 #btn-form,
-#btn-cv {
+#btn-cv, #btn-contacta {
   color: #000;
   font-weight: 500;
   background-color: #e2cfba;
@@ -196,7 +195,6 @@
   -webkit-transition: all 0.25s;
   -moz-transition: all 0.25s;
   -o-transition: all 0.25s;
-  -ms-transition: all 0.25s;
   transition: all 0.25s;
 }
 

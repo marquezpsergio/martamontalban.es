@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-loading',
@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
 })
 export class LoadingComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+  }
 
   ngOnInit(): void {
     document.getElementsByTagName("header")[0].style.display = "none";
@@ -16,7 +17,7 @@ export class LoadingComponent implements OnInit {
     setTimeout(() => {
       document.getElementsByTagName("header")[0].style.display = "block";
       document.getElementsByTagName("footer")[0].style.display = "block";
-      this.router.navigate(["/home"])
+      this.router.navigate(["/home"]).then();
     }, 3000);
   }
 
