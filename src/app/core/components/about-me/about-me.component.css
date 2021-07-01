@@ -95,6 +95,17 @@
 /*===================
   SECCIONES
 ===================*/
+.titulo-seccion {
+  font-family: 'Raleway', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.titulo-seccion span {
+  margin-left: 10px;
+  color: #474747;
+}
+
 .icono-secciones {
   padding: 5px;
   border-radius: 10%;
@@ -106,14 +117,28 @@
   background-color: #0000c23b;
 }
 
-.cardFormacion {
+.card-formacion {
   border-left: 5px solid #0000c23b;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-/* HABILIDADES / CUALIFICACIONES */
-#icono-hab_cualif {
+/* HABILIDADES  */
+#icono-hab {
   background-color: #ffff003b;
+}
+
+#container-habs {
+  background-color: #ffff0028;
+}
+
+#container-habs * h5 {
+  text-shadow: rgba(0, 0, 0, 0.2) 2px 2px 4px;
+}
+
+.habilidad {
+  text-align: left;
+  width: 55%;
+  margin: 0 auto;
 }
 
 /* EXPERIENCIA LABORAL */
@@ -121,9 +146,18 @@
   background-color: #8040003b;
 }
 
+.card-exp_lab {
+  border-left: 5px solid #8040003b;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
 /* INFO ADICIONAL */
-#icono-info_add {
-  background-color: #0000003b;
+#icono-info_ad {
+  background-color: #14D08246;
+}
+
+#container-info_ad {
+  background-color: #14D08246;
 }
 
 /*===================
@@ -215,6 +249,15 @@ textarea {
   #card-info-right {
     border-top-right-radius: 5%;
   }
+
+  .habilidad {
+    width: 100%;
+  }
+
+  #container-habs * h5 {
+    text-align: start;
+    margin-left: 15%;
+  }
 }
 
 @media (min-width: 992px) {
@@ -224,5 +267,21 @@ textarea {
 
   #contact-form-right {
     border-top-right-radius: 5%;
+  }
+
+  .habilidad {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .habilidad {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .habilidad {
+    width: 65%;
   }
 }
