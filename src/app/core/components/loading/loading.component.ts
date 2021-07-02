@@ -18,7 +18,7 @@ export class LoadingComponent implements OnInit {
       document.getElementsByTagName("header")[0].style.display = "block";
       document.getElementsByTagName("footer")[0].style.display = "block";
       this.router.navigate(["/home"]).then();
-    }, 3000);
+    }, 1500);
   }
 
 }
