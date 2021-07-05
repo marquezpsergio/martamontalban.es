@@ -1,7 +1,7 @@
 <main id="about-me">
   <div class="container my-2 p-3 text-center">
     <!-- CARD INFO -->
-    <div class="row mt-4 mb-5">
+    <div class="row mt-4 mb-5" id="divCardInfo">
       <div class="col-lg-7 order-last order-lg-first p-4" id="card-info-left">
         <div class="bio-content">
           <h3 class="text-uppercase left" id="nombre">{{nombre}}</h3>
@@ -44,20 +44,20 @@
               <a href="{{rutaCV}}" class="btn mt-3" id="btn-cv"><i class="far fa-file-alt"></i> Mira mi CV</a>
             </div>
             <div class="col-6">
-              <a [routerLink]="['/about-me']" fragment="contacto" class="btn mt-3" id="btn-contacta"><i
+              <a [routerLink]="['/about-me']" fragment="divContactForm" class="btn mt-3" id="btn-contacta"><i
                 class="far fa-paper-plane "></i> Habla conmigo</a>
             </div>
           </div>
         </div>
       </div>
       <div class="col-lg-5 order-first order-lg-last p-4" id="card-info-right">
-        <img src="{{source}}/about-me-marta.jpeg" class="bio-image" alt="image"/>
+        <img data-src="{{source}}/about-me-marta.jpeg" [ngClass]="['bio-image', 'lazyload']" alt="image"/>
       </div>
     </div>
     <!-- // CARD INFO -->
 
     <!-- FORMACIÓN ACADÉMICA -->
-    <div class="row mt-4 mb-5">
+    <div class="row mt-4 mb-5" id="divFormAcad">
       <div class="col-12">
         <h4 class="mb-4 text-uppercase titulo-seccion"><i class="fas fa-graduation-cap icono-secciones"
                                                           id="icono-formacion"></i>
@@ -117,7 +117,7 @@
     <!-- // FORMACIÓN ACADÉMICA -->
 
     <!-- HABILIDADES -->
-    <div class="row mt-4 mb-5">
+    <div class="row mt-4 mb-5" id="divHabs">
       <div class="col-12 col-lg-10 offset-lg-1">
         <h4 class="mb-4 text-uppercase titulo-seccion"><i class="fas fa-sliders-h icono-secciones" id="icono-hab"></i>
           <span>Habilidades</span></h4>
@@ -175,7 +175,7 @@
     <!-- // HABILIDADES / CUALIFICACIONES -->
 
     <!-- EXPERIENCIA LABORAL -->
-    <div class="row mt-4 mb-5">
+    <div class="row mt-4 mb-5" id="divExpLab">
       <div class="col-12">
         <h4 class="mb-4 text-uppercase titulo-seccion"><i class="fas fa-briefcase icono-secciones"
                                                           id="icono-exp_lab"></i> <span>Experiencia
@@ -213,7 +213,7 @@
 
 
     <!-- INFO ADICIONAL -->
-    <div class="row justify-content-center mt-4 mb-5">
+    <div class="row justify-content-center mt-4 mb-5" id="divInfoAd">
       <div class="col-12 col-md-8 col-xl-6">
         <h4 class="mb-4 text-uppercase titulo-seccion">
           <i class="fas fa-info-circle icono-secciones" id="icono-info_ad"></i>
@@ -234,7 +234,7 @@
     <!-- // INFO ADICIONAL -->
 
     <!-- CONTACTO FORM -->
-    <div class="row mt-5 mb-3" id="contacto">
+    <div class="row mt-5 mb-3" id="divContactForm">
       <div class="col-lg-5 p-4 py-3" id="contact-form-left">
         <i class="far fa-paper-plane pb-2" id="contact-form-icon"></i>
         <h4>Contáctame</h4>

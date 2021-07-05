@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as lazySizes from 'lazysizes';
 
 @Component({
   selector: 'app-home',
@@ -11,6 +12,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    lazySizes.init();
   }
 
 }

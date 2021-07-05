@@ -9,8 +9,6 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { AboutMeComponent } from './core/components/about-me/about-me.component';
 import { LoadingComponent } from './core/components/loading/loading.component';
 
-
-
 const routes: Routes = [
   { path: '', component: LoadingComponent },
   { path: 'home', component: HomeComponent },
@@ -32,7 +30,7 @@ const routes: Routes = [
       onSameUrlNavigation: "reload",
       anchorScrolling: 'enabled',
       scrollPositionRestoration: 'enabled'
-    })
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

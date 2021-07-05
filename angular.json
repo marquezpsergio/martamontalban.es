@@ -39,7 +39,9 @@
               "src/assets/js/jquery/jquery.min.js",
               "src/assets/js/popperjs/popper.min.js",
               "src/assets/js/bootstrap/bootstrap.min.js",
-              "src/assets/js/menu_navbar_top.js"
+              "src/assets/js/menu_navbar_top.js",
+              "node_modules/lazysizes/lazysizes.min.js",
+              "node_modules/lazysizes/plugins/rias/ls.rias.min.js"
             ]
           },
           "configurations": {
