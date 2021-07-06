@@ -7,7 +7,7 @@ import * as lazySizes from 'lazysizes';
 })
 export class AboutMeComponent implements OnInit {
 
-  source = "assets/images";
+  source = "assets/images/about-me";
 
   nombre = "Marta Montalbán";
   cargo = "Comunicadora Audiovisual";

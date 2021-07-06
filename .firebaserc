@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "mamont-d3364": {
+      "hosting": {
+        "martaMontalban": [
+          "mamont-d3364"
+        ]
+      }
+    }
+  }
+}

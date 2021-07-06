@@ -8,7 +8,7 @@ import * as lazySizes from 'lazysizes';
 })
 export class HomeComponent implements OnInit {
 
-  source = "assets/images/sesiones";
+  source = "assets/images/home";
   constructor() { }
 
   ngOnInit(): void {
