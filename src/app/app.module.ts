@@ -11,11 +11,15 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { AboutMeComponent } from './core/components/about-me/about-me.component';
 import { LoadingComponent } from './core/components/loading/loading.component';
+import { SesionComponent } from './core/components/sesion/sesion.component';
+// Services
+import { SesionesService } from './services/sesiones.service';
 
 const routes: Routes = [
   { path: '', component: LoadingComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about-me', component: AboutMeComponent },
+  { path: 'sesion/:id', component: SesionComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ]
 @NgModule({
@@ -25,7 +29,8 @@ const routes: Routes = [
     HeaderComponent,
     HomeComponent,
     AboutMeComponent,
-    LoadingComponent
+    LoadingComponent,
+    SesionComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,7 @@ const routes: Routes = [
     }),
     AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
-  providers: [AngularFirestore],
+  providers: [AngularFirestore, SesionesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

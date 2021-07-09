@@ -27,7 +27,20 @@ h5 {
 
 .hr-light {
   border-top: 3px solid #fff;
-  width: 300px;
+  width: 400px;
+}
+
+.enlaceSesion {
+  color: #000000;
+  transition: all 0.25s;
+  padding: 3px;
+}
+
+.enlaceSesion:hover {
+  color: #ffffff;
+  background-color: #ccb69e;
+  border-radius: 7%;
+  font-size: 17px;
 }
 
 @media (min-width: 768px) {

@@ -8,7 +8,17 @@
 .linkMenuTop:hover,
 .linkMenuTopActive {
   background-color: #dac3ab6b;
-  border-radius: 8%;
+}
+
+.linkMenuTop {
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+@media (min-width: 768px) {
+  .linkMenuTopActive  {
+    border-radius: 7%;
+  }
 }
 
 .dropDownMenuPortfolio {
@@ -17,6 +27,11 @@
 
 .dropDownMenuItemPortfolio {
   border-radius: 2% !important;
+  transition: all 0.5s;
+}
+
+.dropDownMenuItemPortfolio:hover {
+  padding-left: 25px;
 }
 
 /*===================
@@ -33,7 +48,7 @@
   background-color: #ece2d777 !important;
 }
 
-.navbar .nav-item:not(:last-child) {
+.navbar .nav-item{
   margin-right: 10px;
 }
 
@@ -50,7 +65,7 @@
 }
 
 .dropdown-item:hover {
-  background-color: #f5f1ec77;
+  background-color: #ffffffd2;
   -webkit-transition: all 0.25s;
   -o-transition: all 0.25s;
   transition: all 0.25s;
