@@ -46,7 +46,8 @@
 }
 
 #cargo {
-  margin-top: -8px;
+  margin-top: -5px;
+  margin-bottom: 15px;
 }
 
 /* Iconos Redes Sociales */
@@ -100,7 +101,8 @@
 
 #btn-cv,
 #btn-contacta {
-  width: 180px !important;
+  width: 150px !important;
+  font-size: 14px;
   -webkit-transition: all 0.25s;
   -moz-transition: all 0.25s;
   -o-transition: all 0.25s;
@@ -109,8 +111,8 @@
 
 #btn-cv:hover,
 #btn-contacta:hover {
-  width: 190px !important;
-  font-size: 18px;
+  width: 160px !important;
+  font-size: 15px;
 }
 
 /*===================
@@ -193,7 +195,7 @@
 
 #contact-form-right {
   background-color: #f5f2ee;
-  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.16), 0px 2px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 #contact-form-icon {
