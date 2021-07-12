@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SesionesService } from '../../../services/sesiones.service';
-import { Sesion } from '../../../models/Sesion';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-sesiones',
@@ -17,10 +15,8 @@ export class SesionComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private sesionesService: SesionesService) { }
 
   ngOnInit(): void {
-    var sesionGot;
     this.activatedRoute.params.subscribe(param => {
       this.sesionesService.getSesion(param.id).subscribe(s => this.sesion$ = s);
     });
   }
-
 }

@@ -1,0 +1,11 @@
+#main-sesion {
+  margin-top: 88px !important;
+}
+
+#main-sesion * {
+  font-family: Raleway;
+}
+
+#main-sesion * img{
+  max-width: 500px;
+}
