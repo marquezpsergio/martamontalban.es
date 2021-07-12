@@ -11,12 +11,6 @@
   display: flex !important;
 }
 
-@media (max-width: 768px) {
-  .view {
-    height: 80vh;
-  }
-}
-
 h1 {
   letter-spacing: 8px;
 }
