@@ -43,11 +43,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-
-# images
-/src/assets/images/sesiones
-
-# firebase files
-firebase.json
-.firebasesrc
-/.firebase
