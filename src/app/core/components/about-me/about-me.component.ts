@@ -1,5 +1,8 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import * as lazySizes from 'lazysizes';
+import {FormService} from "../../../services/form.service";
+import Swal from 'sweetalert2'
+
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
@@ -11,7 +14,7 @@ export class AboutMeComponent implements OnInit {
 
   nombre = "Marta Montalbán";
   cargo = "Comunicadora Audiovisual";
-  email = "montalbanalarconmarta@gmail.com";
+  correo = "montalbanalarconmarta@gmail.com";
   telefono = 685059209;
   telefonoStr = "685 05 92 09";
   urlTwitter = "https://twitter.com/Marta_montt98";
@@ -34,7 +37,15 @@ export class AboutMeComponent implements OnInit {
   totalAlturaDivInfoAd = 0;
   totalAlturaDivContactForm = 0;
 
-  constructor() { }
+  formulario: any;
+
+  constructor(private formService: FormService) {
+    this.formulario = {
+      subject: '',
+      email: '',
+      message: ''
+    }
+  }
 
   ngOnInit(): void {
     this.inicializarDivs();
@@ -99,5 +110,26 @@ export class AboutMeComponent implements OnInit {
     if (this.divContactForm && totalScroll >= this.totalAlturaDivContactForm * 1.2) {
       this.divContactForm.style.opacity = '1';
     }
+  }
+
+  enviarForm() {
+    this.formService.enviarEmail(this.formulario).subscribe(
+      response => {
+        console.log(response);
+        if (response.status == 200) {
+          Swal.fire(
+            'Mensaje enviado!',
+            'Es un placer. Te responderé en el menor tiempo posible, ¡muchas gracias!',
+            'success'
+          );
+        } else {
+          Swal.fire(
+            'Oops...',
+            'Su mensaje no se ha podido enviar... Inténtelo de nuevo, ¡gracias!',
+            'error'
+          );
+        }
+      }
+    );
   }
 }
