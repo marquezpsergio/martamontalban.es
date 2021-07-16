@@ -118,14 +118,14 @@ export class AboutMeComponent implements OnInit {
         console.log(response);
         if (response.status == 200) {
           Swal.fire(
-            'Mensaje enviado!',
-            'Es un placer. Te responderé en el menor tiempo posible, ¡muchas gracias!',
+            '¡Gracias por tu mensaje!',
+            'Un placer. Te responderé en el menor tiempo posible, ¡muchas gracias!',
             'success'
           );
         } else {
           Swal.fire(
-            'Oops...',
-            'Su mensaje no se ha podido enviar... Inténtelo de nuevo, ¡gracias!',
+            'Oops...!',
+            'Su mensaje no se ha podido enviar... Inténtelo de nuevo por favor, ¡gracias!',
             'error'
           );
         }
