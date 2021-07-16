@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {SesionesService} from '../../../services/sesiones.service';
 import {ActivatedRoute} from '@angular/router';
+import {fromEvent} from "rxjs";
 
 declare var $: any; // Para jQuery
 
@@ -14,6 +15,11 @@ export class SesionComponent implements OnInit {
   sesion$: any;
   source: string = "assets/images/sesiones";
 
+  idImagenModal: number = 0;
+
+  resizeObservable$: any;
+  resizeSubscription$: any;
+
   constructor(private activatedRoute: ActivatedRoute, private sesionesService: SesionesService) {
   }
 
@@ -23,10 +29,22 @@ export class SesionComponent implements OnInit {
         this.sesion$ = s;
       });
     });
+
+    this.resizeObservable$ = fromEvent(window, 'resize')
+    this.resizeSubscription$ = this.resizeObservable$.subscribe(() => {
+      if (this.idImagenModal > 0) {
+        this.mostrarModal(this.idImagenModal);
+      }
+    })
+  }
+
+  ngOnDestroy() {
+    this.resizeSubscription$.unsubscribe()
   }
 
   mostrarModal(id: number) {
     /* Loading Modal Image */
+    this.idImagenModal = id;
     let imagen = this.sesion$.imagenes[id];
     let rutaImagen = this.source + '/' + this.sesion$.directorio + '/' + imagen;
     let imagenModal = $('#imagenModal')
@@ -36,12 +54,17 @@ export class SesionComponent implements OnInit {
     imagenModal.attr('src', rutaImagen);
 
     /* Check Image Width and Height for max-width in Modal */
-    var img = new Image();
-    img.src = rutaImagen;
-    if (img.width > img.height) {
-      $('.modal-dialog').attr('style', 'max-width: 90vw !important');
+    var x = window.matchMedia("(max-width:700px)");
+    if (x.matches) {
+      $('.modal-dialog').attr('style', 'max-width: 100vw !important');
     } else {
-      $('.modal-dialog').attr('style', 'max-width: 700px !important');
+      var img = new Image();
+      img.src = rutaImagen;
+      if (img.width > img.height) {
+        $('.modal-dialog').attr('style', 'max-width: 75vw !important');
+      } else {
+        $('.modal-dialog').attr('style', 'max-width: 600px !important');
+      }
     }
 
     /* Show Modal */
