@@ -10,7 +10,7 @@ export class FormService {
   public url: string;
 
   constructor(private _http: HttpClient) {
-    this.url = 'https://us-central1-mamont-mailer.cloudfunctions.net/mailer';
+    this.url = 'https://mamont-mailsender.sergiomrquez2.repl.co';
   }
 
   enviarEmail(formulario: any): Observable<any> {
