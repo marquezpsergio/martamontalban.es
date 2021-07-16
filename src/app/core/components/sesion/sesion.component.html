@@ -9,10 +9,26 @@
     </div>
     <!-- IMÁGENES -->
     <div class="row">
-      <div class="col-12 col-md-6 col-xl-4 col-xxl-3 p-1 imagen" *ngFor="let item of sesion$.imagenes">
+      <div *ngFor="let item of sesion$.imagenes; let i = index " class="col-12 col-md-6 col-xl-4 col-xxl-3 p-1 imagen">
         <div class="card border-0 text-center">
-          <img [ngClass]="['card-img-top', 'lazyload']" data-src="{{source}}/{{sesion$.directorio}}/{{item}}"
-            alt="{{sesion$.nombre}}">
+          <img (click)="mostrarModal(i)"
+               [ngClass]="['card-img-top', 'lazyload', 'img-portfolio']"
+               alt="{{sesion$.nombre}}" data-src="{{source}}/{{sesion$.directorio}}/{{item}}">
+        </div>
+      </div>
+    </div>
+    <!-- MODAL IMAGEN -->
+    <div aria-hidden="true" class="modal fade" id="modalImagen" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content text-center">
+          <div class="modal-header p-0">
+            <button aria-label="Close" class="btn-close btn-close-top" data-bs-dismiss="modal" type="button"></button>
+          </div>
+          <div class="modal-body">
+            <img [ngClass]="['card-img-top', 'lazyload', 'img-modal']" alt="{{sesion$.nombre}}" data-src=""
+                 id="imagenModal"
+                 src="">
+          </div>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@
   margin-top: 88px !important;
 }
 
-/* INICIALIZO CON OPACITY 0 PARA QUE SE CARGUEN DESPUÉS CON SCROLL*/
+/* 0 to load with SCROLL */
 #divCardInfo,
 #divFormAcad,
 #divHabs,
@@ -119,7 +119,7 @@
   SECCIONES
 ===================*/
 .titulo-seccion {
-  font-family: "Raleway", sans-serif;
+  font-family: Raleway, sans-serif;
   font-size: 28px;
   font-weight: 600;
 }

@@ -115,7 +115,6 @@ export class AboutMeComponent implements OnInit {
   enviarForm() {
     this.formService.enviarEmail(this.formulario).subscribe(
       response => {
-        console.log(response);
         if (response.status == 200) {
           Swal.fire(
             '¡Gracias por tu mensaje!',
