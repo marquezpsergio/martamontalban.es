@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Observable} from "rxjs";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {NgForm} from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -10,13 +11,17 @@ export class FormService {
   public url: string;
 
   constructor(private _http: HttpClient) {
-    this.url = 'https://mamont-mailsender.sergiomrquez2.repl.co';
+    this.url = 'https://formspree.io/f/mknkvqvj';
   }
 
-  enviarEmail(formulario: any): Observable<any> {
-    let params = JSON.stringify(formulario);
-    let headers = new HttpHeaders().set('Content-Type', 'application/json');
+  enviarEmail(contactForm: NgForm): Observable<any> {
+    let params = contactForm.value;
+    const headers = new HttpHeaders({'Content-Type': 'application/json'});
 
-    return this._http.post(this.url, params, {headers: headers})
+    return this._http.post(this.url, {
+      name: params.subject,
+      replyto: params.email,
+      message: params.message
+    }, {headers: headers})
   }
 }

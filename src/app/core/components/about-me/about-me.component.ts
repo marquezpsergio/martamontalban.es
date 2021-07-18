@@ -2,6 +2,7 @@ import {Component, HostListener, OnInit} from '@angular/core';
 import * as lazySizes from 'lazysizes';
 import {FormService} from "../../../services/form.service";
 import Swal from 'sweetalert2'
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-about-me',
@@ -37,14 +38,7 @@ export class AboutMeComponent implements OnInit {
   totalAlturaDivInfoAd = 0;
   totalAlturaDivContactForm = 0;
 
-  formulario: any;
-
   constructor(private formService: FormService) {
-    this.formulario = {
-      subject: '',
-      email: '',
-      message: ''
-    }
   }
 
   ngOnInit(): void {
@@ -112,23 +106,26 @@ export class AboutMeComponent implements OnInit {
     }
   }
 
-  enviarForm() {
-    this.formService.enviarEmail(this.formulario).subscribe(
-      response => {
-        if (response.status == 200) {
-          Swal.fire(
-            '¡Gracias por tu mensaje!',
-            'Un placer. Te responderé en el menor tiempo posible, ¡muchas gracias!',
-            'success'
-          );
-        } else {
-          Swal.fire(
-            'Oops...!',
-            'Su mensaje no se ha podido enviar... Inténtelo de nuevo por favor, ¡gracias!',
-            'error'
-          );
+  enviarForm(contactForm: NgForm) {
+    if (contactForm.valid) {
+      this.formService.enviarEmail(contactForm).subscribe(
+        response => {
+          if (response.ok) {
+            Swal.fire(
+              '¡Gracias por tu mensaje!',
+              'Un placer. Te responderé en el menor tiempo posible, ¡muchas gracias!',
+              'success'
+            );
+            contactForm.reset();
+          } else {
+            Swal.fire(
+              'Oops...!',
+              'Su mensaje no se ha podido enviar... Inténtelo de nuevo por favor, ¡gracias!',
+              'error'
+            );
+          }
         }
-      }
-    );
+      );
+    }
   }
 }

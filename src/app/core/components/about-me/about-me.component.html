@@ -269,7 +269,7 @@
       </div>
 
       <div class="col-lg-7 px-4 py-3" id="contact-form-right">
-        <form #contactForm="ngForm" (ngSubmit)="enviarForm()">
+        <form #contactForm="ngForm" (ngSubmit)="enviarForm(contactForm)">
           <div class="mt-2 mb-3">
             <input type="text" class="form-control" name="subject" #subject="ngModel"
                    [(ngModel)]="formulario.subject"
