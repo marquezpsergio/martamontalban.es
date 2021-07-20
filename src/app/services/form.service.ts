@@ -11,7 +11,7 @@ export class FormService {
   public url: string;
 
   constructor(private _http: HttpClient) {
-    this.url = 'https://formspree.io/f/mknkvqvj';
+    this.url = 'https://formspree.io/f/mdoylywq';
   }
 
   enviarEmail(contactForm: NgForm): Observable<any> {
