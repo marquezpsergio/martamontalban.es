@@ -19,9 +19,20 @@ h5 {
   letter-spacing: 3px;
 }
 
-.hr-light {
+hr {
   border-top: 3px solid #fff;
+}
+
+#hr1 {
   width: 400px;
+}
+
+#hr2 {
+  width: 300px;
+}
+
+h2 {
+  font-size: 20px;
 }
 
 .enlaceSesion {
