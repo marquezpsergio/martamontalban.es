@@ -13,7 +13,7 @@
         <div class="card border-0 text-center">
           <img (click)="mostrarModal(i)"
                [ngClass]="['card-img-top', 'lazyload', 'img-portfolio']"
-               alt="{{sesion$.nombre}}" data-src="{{source}}/{{sesion$.directorio}}/{{item}}">
+               alt="{{sesion$.nombre}}" data-src="{{source}}{{sesion$.directorio}}%2F{{item}}{{altmedia}}">
         </div>
       </div>
     </div>

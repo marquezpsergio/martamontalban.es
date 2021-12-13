@@ -13,7 +13,8 @@ declare var $: any; // Para jQuery
 export class SesionComponent implements OnInit {
 
   sesion$: any;
-  source: string = "assets/images/sesiones";
+  source: string = "https://firebasestorage.googleapis.com/v0/b/mamont-d3364.appspot.com/o/images%2Fsesiones%2F";
+  altmedia = "?alt=media";
 
   idImagenModal: number = 0;
 
@@ -46,7 +47,7 @@ export class SesionComponent implements OnInit {
     /* Loading Modal Image */
     this.idImagenModal = id;
     let imagen = this.sesion$.imagenes[id];
-    let rutaImagen = this.source + '/' + this.sesion$.directorio + '/' + imagen;
+    let rutaImagen = this.source + this.sesion$.directorio + '%2F' + imagen + this.altmedia;
     let imagenModal = $('#imagenModal')
     imagenModal.attr('data-src', '');
     imagenModal.attr('src', '');

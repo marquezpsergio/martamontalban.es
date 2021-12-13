@@ -8,7 +8,8 @@ import * as lazySizes from 'lazysizes';
 })
 export class HomeComponent implements OnInit {
 
-  source = "assets/images/home";
+  source = "https://firebasestorage.googleapis.com/v0/b/mamont-d3364.appspot.com/o/images%2Fhome%2F";
+  altmedia = "?alt=media";
   constructor() { }
 
   ngOnInit(): void {
